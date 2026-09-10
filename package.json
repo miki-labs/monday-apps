@@ -1,0 +1,12 @@
+{
+  "name": "@miki-labs/monday-apps",
+  "private": true,
+  "version": "0.0.0",
+  "packageManager": "pnpm@11.20.0",
+  "scripts": {
+    "verify": "pnpm lint && pnpm typecheck && pnpm test",
+    "lint": "node scripts/verify-structure.mjs",
+    "typecheck": "node scripts/verify-structure.mjs",
+    "test": "node --test tests/*.test.mjs"
+  }
+}

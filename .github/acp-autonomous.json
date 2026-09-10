@@ -1,0 +1,4 @@
+{
+  "schema": "acp.autonomous-policy/v1",
+  "required_checks": ["Verify"]
+}
