@@ -4,9 +4,23 @@
   "version": "0.0.0",
   "packageManager": "pnpm@11.20.0",
   "scripts": {
-    "verify": "pnpm lint && pnpm typecheck && pnpm test",
-    "lint": "node scripts/verify-structure.mjs",
-    "typecheck": "node scripts/verify-structure.mjs",
-    "test": "node --test tests/*.test.mjs"
+    "dev": "pnpm --parallel --filter @miki-labs/contextual-columns --filter @miki-labs/automation-preflight --filter @miki-labs/automation-policy dev",
+    "dev:contextual-columns": "pnpm --filter @miki-labs/contextual-columns dev",
+    "dev:automation-preflight": "pnpm --filter @miki-labs/automation-preflight dev",
+    "dev:automation-policy": "pnpm --filter @miki-labs/automation-policy dev",
+    "build": "pnpm --filter @miki-labs/contextual-columns --filter @miki-labs/automation-preflight --filter @miki-labs/automation-policy build",
+    "lint": "pnpm --filter @miki-labs/contextual-columns --filter @miki-labs/automation-preflight --filter @miki-labs/automation-policy --filter @miki-labs/monday-client --filter @miki-labs/automation-ir --filter @miki-labs/ui lint && node scripts/verify-structure.mjs",
+    "typecheck": "pnpm --filter @miki-labs/contextual-columns --filter @miki-labs/automation-preflight --filter @miki-labs/automation-policy --filter @miki-labs/monday-client --filter @miki-labs/automation-ir --filter @miki-labs/ui typecheck",
+    "test": "node --test tests/*.test.mjs",
+    "verify": "pnpm lint && pnpm typecheck && pnpm test && pnpm build"
+  },
+  "devDependencies": {
+    "@eslint/js": "^10.0.1",
+    "@vitejs/plugin-react": "^6.1.1",
+    "eslint": "^10.10.0",
+    "globals": "^17.12.0",
+    "typescript-eslint": "^8.70.0",
+    "typescript": "^6.0.3",
+    "vite": "^8.3.0"
   }
 }
