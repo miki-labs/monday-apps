@@ -1,0 +1,24 @@
+{
+  "name": "@miki-labs/automation-policy",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --host 127.0.0.1 --port 5175",
+    "build": "vite build",
+    "lint": "eslint src",
+    "typecheck": "tsc --noEmit",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@miki-labs/automation-ir": "workspace:*",
+    "@miki-labs/monday-client": "workspace:*",
+    "@miki-labs/ui": "workspace:*",
+    "react": "^19.3.0",
+    "react-dom": "^19.3.0"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.3",
+    "@types/react-dom": "^19.2.3"
+  }
+}

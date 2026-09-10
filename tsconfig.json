@@ -1,0 +1,11 @@
+{
+  "files": [],
+  "references": [
+    { "path": "./apps/contextual-columns" },
+    { "path": "./apps/automation-preflight" },
+    { "path": "./apps/automation-policy" },
+    { "path": "./packages/monday-client" },
+    { "path": "./packages/automation-ir" },
+    { "path": "./packages/ui" }
+  ]
+}
